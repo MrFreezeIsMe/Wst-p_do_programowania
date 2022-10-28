@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int godzina;
+    int zmiana;
+    string pora;
+
+    cout << "Wpisz godzine miedzy 1 a 12: \n";
+    cin >> godzina;
+    cout << "am czy pm? \n";
+    cin >> pora;
+    cout << "Ile godzin w przod? \n";
+    cin >> zmiana;
+
+    if (godzina > 12 || godzina < 1)
+    {
+        cout << "Niepoprawna godzina";
+        return 3;
+    }
+    else if (pora.compare("am") == 0)
+    {
+        if ((godzina + zmiana) > 12 )
+        {
+                if ((zmiana / 12) % 2 == 0)
+                {
+                    cout << ((godzina + zmiana) % 12) + 1 << " AM";
+                }
+                else
+                {
+                    cout << ((godzina + zmiana) % 12) + 1 << " PM";
+                }
+        }
+        else
+        {
+            cout << (godzina + zmiana) << "AM";
+        }
+        return 2;
+    }
+    else if (pora.compare("pm") == 0)
+    {
+        if ((godzina + zmiana) > 12)
+        {
+                if ((zmiana / 12) % 2 == 0)
+                {
+                    cout << ((godzina + zmiana) % 12) << " PM";
+                }
+                else
+                {
+                    cout << ((godzina + zmiana) % 12) << " AM";
+                }
+        }
+        else
+        {
+            cout << (godzina + zmiana) << "PM";
+        }
+    }
+    else
+    {
+        cout << "Niepoprawne dane";
+    }
+}   

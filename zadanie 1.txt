@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    double cena_produktu;
+    double cena_sprzedazy;
+
+    cout << "Ile kosztuje produkt? \n";
+        cin >> cena_produktu;
+    cout << "Za ile zostal sprzedany? \n";
+        cin >> cena_sprzedazy;
+
+        if (cena_sprzedazy > cena_produktu)
+        {
+            cout << "Twoj zysk to: " << cena_sprzedazy - cena_produktu;
+        }
+        else if (cena_sprzedazy < cena_produktu)
+        {
+            cout << "Twoja strata to: " << cena_produktu - cena_sprzedazy;
+        }
+        else if (cena_sprzedazy == cena_produktu)
+        {
+            cout << "Wyszedles na zero";
+        }
+        else
+        {
+            cout << "Blad";
+        }
+
+
+
+}
+
