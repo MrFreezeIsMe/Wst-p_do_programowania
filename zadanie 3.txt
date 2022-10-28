@@ -1,3 +1,5 @@
+NIE DZIAŁA
+
 #include <iostream>
 using namespace std;
 
