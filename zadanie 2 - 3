@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int w=0;
+int n=0;
+int m=1;
+int l;
+
+int main() 
+{
+	cout << "Podaj liczbe, do ktorej wyswietlic ciag Fibonacciego: \n";
+	cin >> l;
+	
+	if (l <= 0)
+	{
+		cout << "Brak wynikow\n";
+	}
+
+	else
+	{
+		for (int i = 0; i < l; i++)
+		{
+			cout << w << ", ";
+			w = n + m;
+			m = n;
+			n = w;
+		}
+	}
+}
