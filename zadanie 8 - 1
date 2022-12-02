@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int tab1[20];
+
+int secondToMax(int tab1[])
+{
+    int sendToMax = 0;
+    int Max = 0;
+    Max = tab1[0];
+    for (int i = 0; i < 20; i++)
+    {
+        if (tab1[i] > Max)
+        {
+            sendToMax = Max;
+            Max = tab1[i];
+        }
+        else if (tab1[i] > sendToMax && tab1[i] < Max)
+        {
+            sendToMax = tab1[i];
+        }
+    }
+    return sendToMax;
+}
+
+int main()
+{
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++)
+    {
+        tab1[i] = rand() % 101;
+        cout << tab1[i] << " ";
+    }
+    cout << endl;
+    cout << secondToMax(tab1);
+}
+
