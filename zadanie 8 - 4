@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+
+void Random()
+{
+    srand(time(NULL));
+    int x;
+    int counterOfFives = 0;
+    int counterOfOnes = 0;
+    int iteration = 0;
+    while (counterOfFives < 3 || counterOfOnes < 2)
+    {
+        x = rand() % 11 - 5;
+        if (x = 5)
+        {
+            counterOfFives++;
+            cout << x << " Iteration: " << iteration << " " << endl;
+        }
+        if (x = 1)
+        {
+            counterOfOnes++;
+            cout << x << " Iteration: " << iteration << " " << endl;
+        }
+        iteration++;
+    }
+}
+
+int main()
+{
+    Random();
+}
+
