@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+string Reversed(string TextToReverse)
+{
+    int a = TextToReverse.length();
+    string inReverse = TextToReverse;
+    for (int i = 0; i < a; i++)
+    {
+        inReverse[i] = TextToReverse[a - i - 1];
+    }
+    return inReverse;
+}
+
+int main()
+{
+    string TTR;
+    cout << "Insert text that you wish to reverse: \n";
+        cin >> TTR;
+    cout << Reversed(TTR);
+}
+
