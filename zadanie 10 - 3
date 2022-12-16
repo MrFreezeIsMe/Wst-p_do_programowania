@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int tylkoLitery(string napis)
+{
+	int counter=0;
+	for (int i = 0; i < napis.length(); i++)
+	{
+		if (((napis[i] < 'a') && (napis[i] > 'Z')) || (napis[i] > 'z') || (napis[i] < 'A'))
+		{
+			napis[i] = '-';
+			counter++;
+		}
+	}
+	cout << napis << endl;
+	return counter;
+}
+
+
+int main()
+{
+	string napis = "aGah7JJ02;K.45";
+	cout << tylkoLitery(napis);
+}
