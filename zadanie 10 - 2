@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int ileZgodnych(int tablica1[], int tablica2[], int rozmiar)
+{
+	int counter = 0;
+	for (int i = 0; i < rozmiar; i++)
+	{
+		if (tablica1[i] == tablica2[i])
+		{
+			cout << i << " ";
+			counter++;
+		}
+	}
+	cout << endl;
+	return counter;
+}
+
+
+int main()
+{
+		srand(time(NULL));
+
+		int tablica1[10];
+		int tablica2[10];
+
+		for (int i = 0; i < sizeof(tablica1)/4; i++)
+		{
+			tablica1[i] = rand() % 4;
+		}
+
+		for (int i = 0; i < sizeof(tablica2)/4; i++)
+		{
+			tablica2[i] = rand() % 4;
+		}
+
+		cout << ileZgodnych(tablica1, tablica2, 10);
+}
