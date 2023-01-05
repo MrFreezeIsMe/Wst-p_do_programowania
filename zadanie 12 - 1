@@ -4,7 +4,7 @@ using namespace std;
 
 int sumOfArray(int tab[], int rozmiar)
 {
-    if (rozmiar == 0)
+    if (rozmiar <= 0)
     {
         return 0;
     }
