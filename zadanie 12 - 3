@@ -12,9 +12,9 @@ void zamien(int a, int b)
 
 void zamienPtr(int *a, int *b)
 {
-    int *temp = a;
-    a = b;
-    b = temp;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main()
@@ -23,6 +23,6 @@ int main()
     int b = 3;
     zamien(a, b);
     cout << a << " " << b << endl;
-    zamienPtr(&a, &b)
+    zamienPtr(&a, &b);
     cout << a << " " << b;
 }
