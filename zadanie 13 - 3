@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> evenVector(vector<int> wektor)
+{
+	for (int i = 0; i < wektor.size(); i++)
+	{
+		if ((wektor.at(i)%2) == 1)
+		{
+			wektor.at(i) = wektor.at(i) + 1;
+		}
+		cout << wektor.at(i) << " ";
+	}
+	
+	return wektor;
+}
+
+int main()
+{
+	vector<int> wektor = { 1,2,3,4 };
+	evenVector(wektor);
+}
