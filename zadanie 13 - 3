@@ -5,20 +5,24 @@ using namespace std;
 
 vector<int> evenVector(vector<int> wektor)
 {
+	vector<int> even;
+
 	for (int i = 0; i < wektor.size(); i++)
 	{
-		if ((wektor.at(i)%2) == 1)
+		if ((wektor.at(i) % 2) == 0)
 		{
-			wektor.at(i) = wektor.at(i) + 1;
+			even.push_back(wektor.at(i));
 		}
-		cout << wektor.at(i) << " ";
 	}
-	
-	return wektor;
+	return even;
 }
 
 int main()
 {
 	vector<int> wektor = { 1,2,3,4 };
-	evenVector(wektor);
+	vector<int> wektorek = evenVector(wektor);
+	for (int i = 0; i < wektorek.size(); i++)
+	{
+		cout << wektorek.at(i) << " ";
+	}
 }
